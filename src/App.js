@@ -1,17 +1,14 @@
-import "./App.css";
-import Header from "./UI/Header/Header";
-import Card from "./UI/Card/Card";
-import Form from "./Form/Form";
+import Header from "./Components/Header/Header";
+import Card from "./Components/Card/Card";
+import Form from "./Pages/Form";
 
 function App() {
   //Main container with the header and form
   return (
-    <div>
       <Card>
         <Header title={"Notification Form"}></Header>
         <Form></Form>
       </Card>
-    </div>
   );
 }
 

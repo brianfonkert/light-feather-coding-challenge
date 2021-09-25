@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Select from "react-select";
-import ErrorModal from "../UI/ErrorModal/ErrorModal";
+import ErrorModal from "../Components/ErrorModal/ErrorModal";
 import validator from "validator";
 import Input from "react-phone-number-input/input";
 
@@ -47,10 +47,10 @@ const Form = () => {
 
   const supervisorChangeHandler = (event) => {
     setActiveOption(event);
-    if (event === null){
-      setSupervisor([])
+    if (event === null) {
+      setSupervisor([]);
     } else {
-    setSupervisor(event);
+      setSupervisor(event);
     }
   };
 
@@ -189,7 +189,7 @@ const Form = () => {
       });
       return;
     }
-    
+
     if (formData.supervisor === undefined) {
       setError({
         title: "Supervisor required",
@@ -249,7 +249,7 @@ const Form = () => {
 
   //Form and ErrorModal
   return (
-    <div>
+    <>
       {error && (
         <ErrorModal
           onConfirm={errorHandler}
@@ -265,7 +265,7 @@ const Form = () => {
             value={firstName}
             className={classes.input}
             onChange={fNameChangeHandler}
-          ></input>
+          />
         </div>
         <div style={{ display: "inline-block", padding: "10px" }}>
           <label className={classes.label}>Last Name</label>
@@ -274,7 +274,7 @@ const Form = () => {
             value={lastName}
             className={classes.input}
             onChange={lNameChangeHandler}
-          ></input>
+          />
         </div>
         <div>
           <span className={classes.span}>
@@ -289,7 +289,7 @@ const Form = () => {
                 type="checkbox"
                 checked={emEnabled}
                 onChange={emChangeHandler}
-              ></input>
+              />
               <label style={{ color: "white" }}>Email</label>
             </div>
             <input
@@ -299,7 +299,7 @@ const Form = () => {
               type="email"
               value={emailAddress}
               onChange={emailChangeHandler}
-            ></input>
+            />
           </div>
           <div style={{ display: "inline-block", padding: "10px" }}>
             <div style={{ marginLeft: "8px" }}>
@@ -309,7 +309,7 @@ const Form = () => {
                 checked={pEnabled}
                 onChange={pChangeHandler}
                 className={classes.inputcheckbox}
-              ></input>
+              />
               <label style={{ color: "white" }}>Phone Number</label>
             </div>
             <Input
@@ -318,7 +318,7 @@ const Form = () => {
               country="US"
               value={phoneNumber}
               onChange={phoneChangeHandler}
-            ></Input>
+            />
           </div>
         </div>
         <div
@@ -338,7 +338,7 @@ const Form = () => {
             defaultValue="Select..."
             options={options}
             onChange={supervisorChangeHandler}
-          ></Select>
+          />
         </div>
         <div style={{ height: "50px" }}>
           <button className={classes.button} type="submit">
@@ -346,7 +346,7 @@ const Form = () => {
           </button>
         </div>
       </form>
-    </div>
+    </>
   );
 };
 
