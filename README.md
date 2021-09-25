@@ -2,6 +2,10 @@
 
 Brian Fonkert
 
+This project is deployed here: https://brianfonkert.github.io/light-feather-coding-challenge/
+
+Alternatively, instructions for installation and running locally can be found below.
+
 ## Requirements
 
 This project requires the installation of node.js from (https://nodejs.org/en/).
