@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/light-feather-coding-challenge/static/css/main.ad9e7d6e.chunk.css",
+    "main.js": "/light-feather-coding-challenge/static/js/main.f9090e56.chunk.js",
+    "main.js.map": "/light-feather-coding-challenge/static/js/main.f9090e56.chunk.js.map",
+    "runtime-main.js": "/light-feather-coding-challenge/static/js/runtime-main.93d48014.js",
+    "runtime-main.js.map": "/light-feather-coding-challenge/static/js/runtime-main.93d48014.js.map",
+    "static/js/2.6c991dfc.chunk.js": "/light-feather-coding-challenge/static/js/2.6c991dfc.chunk.js",
+    "static/js/2.6c991dfc.chunk.js.map": "/light-feather-coding-challenge/static/js/2.6c991dfc.chunk.js.map",
+    "static/js/3.9a576a02.chunk.js": "/light-feather-coding-challenge/static/js/3.9a576a02.chunk.js",
+    "static/js/3.9a576a02.chunk.js.map": "/light-feather-coding-challenge/static/js/3.9a576a02.chunk.js.map",
+    "index.html": "/light-feather-coding-challenge/index.html",
+    "static/css/main.ad9e7d6e.chunk.css.map": "/light-feather-coding-challenge/static/css/main.ad9e7d6e.chunk.css.map",
+    "static/js/2.6c991dfc.chunk.js.LICENSE.txt": "/light-feather-coding-challenge/static/js/2.6c991dfc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93d48014.js",
+    "static/js/2.6c991dfc.chunk.js",
+    "static/css/main.ad9e7d6e.chunk.css",
+    "static/js/main.f9090e56.chunk.js"
+  ]
+}
