@@ -1,0 +1,13 @@
+.main-header {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background: #2596be;  }
+  
+  .main-header h2 {
+    padding: 10px;
+    margin:auto;
+    color: white;
+    display: flex;
+  }

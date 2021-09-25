@@ -1,0 +1,46 @@
+.input {
+  border-radius: 3px;
+  border: none;
+  width: 200px;
+  height: 2rem;
+  margin: 2px 10px 10px 10px;
+}
+
+.wrapper {
+  display: "inline-block";
+  padding: "10px";
+}
+
+.span {
+  color: white;
+  padding: 20px;
+}
+
+.label {
+  display: block;
+  color: white;
+  margin-left: 10px;
+}
+
+.button {
+  height: 40px;
+  width: 80px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background-color: #2596be;
+  display: block;
+  margin: auto;
+}
+
+.button:hover {
+  height: 40px;
+  width: 80px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background-color: #69ccec;
+}
+
+@media (max-width: 975px) {
+}
