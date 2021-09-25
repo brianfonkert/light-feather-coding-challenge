@@ -19,6 +19,7 @@ const Form = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [supervisor, setSupervisor] = useState([]);
   const [options, setOptions] = useState([]);
+  const [activeOption, setActiveOption] = useState([]);
   const [emEnabled, setEmEnabled] = useState(false);
   const [pEnabled, setPEnabled] = useState(false);
   const [error, setError] = useState();
@@ -44,8 +45,13 @@ const Form = () => {
     }
   };
 
-  const supervisorChangeHandler = (value) => {
-    setSupervisor(value);
+  const supervisorChangeHandler = (event) => {
+    setActiveOption(event);
+    if (event === null){
+      setSupervisor([])
+    } else {
+    setSupervisor(event);
+    }
   };
 
   const emChangeHandler = () => {
@@ -73,7 +79,6 @@ const Form = () => {
           throw new Error();
         }
         const data = await response.json();
-        console.log(data);
         const returnedOptions = data.results.map((optionData) => {
           return {
             value: optionData.name.first + " " + optionData.name.last,
@@ -184,7 +189,7 @@ const Form = () => {
       });
       return;
     }
-    console.log(formData.supervisor);
+    
     if (formData.supervisor === undefined) {
       setError({
         title: "Supervisor required",
@@ -229,6 +234,7 @@ const Form = () => {
       setEmail("");
       setPhoneNumber("");
       setSupervisor([]);
+      setActiveOption([]);
 
       //Catch any errors and display them using ErrorModal.
     } catch (error) {
@@ -259,7 +265,6 @@ const Form = () => {
             value={firstName}
             className={classes.input}
             onChange={fNameChangeHandler}
-
           ></input>
         </div>
         <div style={{ display: "inline-block", padding: "10px" }}>
@@ -316,14 +321,20 @@ const Form = () => {
             ></Input>
           </div>
         </div>
-        <div style={{ padding: "0px 10px 10px 10px", width: "300px", margin: "auto" }}>
+        <div
+          style={{
+            padding: "0px 10px 10px 10px",
+            width: "300px",
+            margin: "auto",
+          }}
+        >
           <label style={{ color: "white", marginBottom: "10px" }}>
             Supervisor
           </label>
           <Select
             id="supervisor"
             isClearable
-            value={supervisor}
+            value={activeOption}
             defaultValue="Select..."
             options={options}
             onChange={supervisorChangeHandler}
