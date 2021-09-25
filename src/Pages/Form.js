@@ -258,7 +258,7 @@ const Form = () => {
         />
       )}
       <form noValidate onSubmit={submitHandler}>
-        <div style={{ display: "inline-block", padding: "10px" }}>
+        <div className={classes.wrapper}>
           <label className={classes.label}>First Name</label>
           <input
             id="firstname"
@@ -267,7 +267,7 @@ const Form = () => {
             onChange={fNameChangeHandler}
           />
         </div>
-        <div style={{ display: "inline-block", padding: "10px" }}>
+        <div className={classes.wrapper}>
           <label className={classes.label}>Last Name</label>
           <input
             id="lastname"
@@ -282,7 +282,7 @@ const Form = () => {
           </span>
         </div>
         <div>
-          <div style={{ display: "inline-block", padding: "10px" }}>
+          <div className={classes.wrapper}>
             <div style={{ marginLeft: "8px" }}>
               <input
                 id="emailchk"
@@ -301,7 +301,7 @@ const Form = () => {
               onChange={emailChangeHandler}
             />
           </div>
-          <div style={{ display: "inline-block", padding: "10px" }}>
+          <div className={classes.wrapper}>
             <div style={{ marginLeft: "8px" }}>
               <input
                 id="phonechk"
